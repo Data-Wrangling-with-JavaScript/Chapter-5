@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>My prototype web page</title>
+    </head>
+    <body>
+        <div id="placeholder" style="height: 400px"></div>
+
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/Flot/jquery.flot.js"></script>
+        <script src="/bower_components/data-forge/data-forge.dist.js"></script>
+        
+        <script>
+            $.get('../output/trend_output.csv')
+                .then(response => {
+                    var dataFrame = new dataForge
+                        .fromCSV(response)
+                        .parseFloats(["Month#", "Trend"])
+                        .setIndex("Month#");
+                    var data = dataFrame
+                    .getSeries("Trend")
+                    .toPairs();
+                    $.plot("#placeholder", [ data ]);
+                })
+                .catch(err => {
+                    console.error(err && err.stack || err);
+                })
+        </script>
+    </body>
+</html>
