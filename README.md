@@ -1,2 +1,3 @@
-# Chapter-6
-Code examples for Chapter 6 of JavaScript Data Wrangling.
+# JavaScript Data Wrangling / Chapter-5
+
+Code examples for Chapter 5 of JavaScript Data Wrangling.
