@@ -1,10 +1,10 @@
 'use strict';
 
-var importCsvFile = require('../toolkit/importCsvFile.js');
+const importCsvFile = require('../toolkit/importCsvFile.js');
 
 importCsvFile('../data/monthly_crashes-cut-down.csv')
     .then(data => {
-        var sample = data[0];
+        const sample = data[0];
         console.log('Year: ' + typeof(sample.Year));
         console.log('Month: ' + typeof(sample.Month));
         console.log('Crashes: ' + typeof(sample.Crashes));

@@ -1,7 +1,7 @@
 'use strict';
 
-var dataForge = require('data-forge');
-var formulajs = require('formulajs');
+const dataForge = require('data-forge');
+const formulajs = require('formulajs');
 
 dataForge.readFile('../data/monthly_crashes-cut-down.csv')
     .parseCSV()
@@ -10,12 +10,12 @@ dataForge.readFile('../data/monthly_crashes-cut-down.csv')
             "Month#", "Year", "Crashes", "Fatalities", 
             "Hospitalized"
         ]);
-        var monthNoSeries = dataFrame.getSeries("Month#");
-        var xValues = monthNoSeries.take(6).toArray();
-        var fatalitiesSeries = dataFrame.getSeries("Fatalities");
-        var yValues = fatalitiesSeries.take(6).toArray();
-        var nextMonthNo = monthNoSeries.skip(6).first();
-        var nextMonthFatalitiesForecast = formulajs.FORECAST(nextMonthNo, yValues, xValues);
+        const monthNoSeries = dataFrame.getSeries("Month#");
+        const xValues = monthNoSeries.take(6).toArray();
+        const fatalitiesSeries = dataFrame.getSeries("Fatalities");
+        const yValues = fatalitiesSeries.take(6).toArray();
+        const nextMonthNo = monthNoSeries.skip(6).first();
+        const nextMonthFatalitiesForecast = formulajs.FORECAST(nextMonthNo, yValues, xValues);
         console.log('Forecasted fatalities: ' + nextMonthFatalitiesForecast);
     })
     .catch(err => {

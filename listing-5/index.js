@@ -1,7 +1,7 @@
 'use strict;'
 
-var assert = require('assert');
-var importCsvFile = require('../toolkit/importCsvFile.js');
+const assert = require('assert');
+const importCsvFile = require('../toolkit/importCsvFile.js');
 
 importCsvFile('../data/monthly_crashes-cut-down.csv')
     .then(data => {

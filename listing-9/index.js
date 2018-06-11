@@ -1,6 +1,6 @@
 'use strict';
 
-var dataForge = require('data-forge');
+const dataForge = require('data-forge');
 
 dataForge.readFile('../data/monthly_crashes-cut-down.csv')
     .parseCSV()

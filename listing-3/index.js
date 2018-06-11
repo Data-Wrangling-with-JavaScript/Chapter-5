@@ -1,10 +1,10 @@
 'use strict;'
 
-var importCsvFile = require('../toolkit/importCsvFile.js');
+const importCsvFile = require('../toolkit/importCsvFile.js');
 
 importCsvFile('../data/monthly_crashes-cut-down.csv')
     .then(data => {
-        var sample = data.slice(0, 3);
+        const sample = data.slice(0, 3);
         console.log(sample);
     })
     .catch(err => {
