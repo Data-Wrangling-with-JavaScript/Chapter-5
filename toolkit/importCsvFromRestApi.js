@@ -1,15 +1,15 @@
 'use strict';
 
-var request = require('request-promise');
-var papa = require('papaparse');
+const request = require('request-promise');
+const papa = require('papaparse');
 
-var importCsvFromRestApi = function (url) {
+function importCsvFromRestApi (url) {
     return request.get({ 
             uri: url,
             json: false
         })
         .then(response => {
-            var result = papa.parse(response, {
+            const result = papa.parse(response, {
                 header: true,
                 dynamicTyping: true
             });

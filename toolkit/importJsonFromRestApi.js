@@ -1,8 +1,8 @@
 'use strict';
 
-var request = require('request-promise');
+const request = require('request-promise');
 
-var importJsonFromRestApi = function (url) {
+function importJsonFromRestApi (url) {
     return request.get({
             uri: url,
             json: true

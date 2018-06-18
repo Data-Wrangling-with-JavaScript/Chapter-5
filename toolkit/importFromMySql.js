@@ -1,6 +1,6 @@
 'use strict';
 
-var importFromMySql = function (db, tableName) {
+function importFromMySql (db, tableName) {
     return db.exec('select * from ' + tableName);
 };
 

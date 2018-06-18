@@ -1,8 +1,8 @@
 'use strict';
 
-var mongo = require('promised-mongo');
+const mongo = require('promised-mongo');
 
-var importFromMongoDB = function (db, collectionName) {
+function importFromMongoDB (db, collectionName) {
     return db[collectionName].find().toArray();
 };
 

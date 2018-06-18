@@ -1,6 +1,6 @@
 'use strict';
 
-var exportToMySql = function (db, tableName, data) {
+function exportToMySql (db, tableName, data) {
     return data.reduce(
             (prevPromise, record) =>
                 prevPromise.then(() =>
