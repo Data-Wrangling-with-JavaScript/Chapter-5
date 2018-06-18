@@ -1,9 +1,9 @@
 'use strict;'
 
 const assert = require('assert');
-const importCsvFile = require('../toolkit/importCsvFile.js');
+const importCsvFile = require('./toolkit/importCsvFile.js');
 
-importCsvFile('../data/monthly_crashes-cut-down.csv')
+importCsvFile('./data/monthly_crashes-cut-down.csv')
     .then(data => {
         data.forEach(row => {
             assert(typeof(row.Year) === 'number');

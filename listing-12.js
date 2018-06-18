@@ -3,7 +3,7 @@
 const dataForge = require('data-forge');
 const formulajs = require('formulajs');
 
-dataForge.readFile('../data/monthly_crashes-cut-down.csv')
+dataForge.readFile('./data/monthly_crashes-cut-down.csv')
     .parseCSV()
     .then(dataFrame => {
         dataFrame = dataFrame
@@ -28,7 +28,7 @@ dataForge.readFile('../data/monthly_crashes-cut-down.csv')
         });
         return dataFrameWithForecast
             .asCSV()
-            .writeFile("../output/trend_output.csv");
+            .writeFile("./output/trend_output.csv");
     })
     .catch(err => {
         console.error(err && err.stack || err);

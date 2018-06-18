@@ -3,7 +3,7 @@
 const dataForge = require('data-forge');
 const formulajs = require('formulajs');
 
-dataForge.readFile('../data/monthly_crashes-cut-down.csv')
+dataForge.readFile('./data/monthly_crashes-cut-down.csv')
     .parseCSV()
     .then(dataFrame => {
         dataFrame = dataFrame

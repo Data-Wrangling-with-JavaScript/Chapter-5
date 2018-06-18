@@ -1,8 +1,8 @@
 'use strict';
 
-const importCsvFile = require('../toolkit/importCsvFile.js');
+const importCsvFile = require('./toolkit/importCsvFile.js');
 
-importCsvFile('../data/monthly_crashes-cut-down.csv')
+importCsvFile('./data/monthly_crashes-cut-down.csv')
     .then(data => {
         const sample = data[0];
         console.log('Year: ' + typeof(sample.Year));

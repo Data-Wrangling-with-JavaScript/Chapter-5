@@ -2,7 +2,7 @@
 
 const dataForge = require('data-forge');
 
-dataForge.readFile('../data/monthly_crashes-cut-down.csv')
+dataForge.readFile('./data/monthly_crashes-cut-down.csv')
     .parseCSV()
     .then(dataFrame => {
         console.log(dataFrame.getColumnNames());

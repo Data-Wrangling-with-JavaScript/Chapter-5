@@ -34,7 +34,7 @@
         <script src="/bower_components/data-forge/data-forge.dist.js"></script>
         
         <script>
-            $.get('../output/trend_output.csv')
+            $.get('./output/trend_output.csv')
                 .then(response => {
                     var dataFrame = new dataForge
                         .fromCSV(response)
