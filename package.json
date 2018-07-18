@@ -1,0 +1,24 @@
+{
+  "name": "chapter-5",
+  "version": "1.0.0",
+  "description": "Code examples for Chapter 5 of JavaScript Data Wrangling.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/data-wrangling-with-javascript/chapter-5.git"
+  },
+  "keywords": [],
+  "author": "ashley@codecapers.com.au",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/data-wrangling-with-javascript/chapter-5/issues"
+  },
+  "homepage": "https://github.com/data-wrangling-with-javascript/chapter-5#readme",
+  "dependencies": {
+    "data-forge": "1.2.1",
+    "formulajs": "1.0.8",
+    "papaparse": "4.5.0"
+  }
+}
