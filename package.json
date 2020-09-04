@@ -19,6 +19,6 @@
   "dependencies": {
     "data-forge": "1.2.1",
     "formulajs": "1.0.8",
-    "papaparse": "4.5.0"
+    "papaparse": "5.2.0"
   }
 }
